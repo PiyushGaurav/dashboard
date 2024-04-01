@@ -5,30 +5,17 @@ import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-function HomeScreen() {
-	return (
-		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-			<Text>Home Screen</Text>
-		</View>
-	);
-}
-
 function FeedScreen() {
-	return (
-		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-			<Text>Feed Screen</Text>
-		</View>
-	);
+	return <Feed />;
 }
 
 function ArticleScreen() {
-	return (
-		<View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-			<Text>Article Screen</Text>
-		</View>
-	);
+	return <SideBar />;
 }
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import HomeScreen from './src/screens/Home';
+import Feed from './src/components/Feed';
+import SideBar from './src/components/SideBar';
 
 const Drawer = createDrawerNavigator();
 
